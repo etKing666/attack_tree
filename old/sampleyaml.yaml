@@ -1,0 +1,15 @@
+---
+ root: Pampered Pets
+  leaf0: Steal credentials
+   leaf01: Social engineering
+   leaf02: Malware
+   leaf03: Bribing
+   leaf04: Phising
+    leaf041: Phishing by email
+    leaf042: Phishing by other means
+  leaf1: Denial of service
+   leaf11: Brute force
+   leaf12: System shutdown/reboot
+ leaf2: Tampering
+   leaf21: Data manipulation
+   leaf22: Disk wipe
