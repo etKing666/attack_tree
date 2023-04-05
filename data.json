@@ -2,56 +2,66 @@
     "root": {
     "name": "Pampered Pets",
     "parent": "None",
-    "probability": ""
+    "value":null
   },
     "leaf0": {
     "name": "Steal credentials",
     "parent": "root",
-    "probability": ""
+    "value":null
   },
     "leaf00": {
     "name": "Social engineering",
     "parent": "Steal credentials",
-    "probability": ""
+    "value":null
   },
     "leaf000": {
     "name": "Phishing",
     "parent": "Social engineering",
-    "probability": ""
+    "value":5.0
   },
     "leaf001": {
     "name": "Baiting",
     "parent": "Social engineering",
-    "probability": ""
+    "value":7.0
   },
     "leaf1": {
     "name": "Denial of service",
     "parent": "root",
-    "probability": ""
+    "value":null
   },
     "leaf10": {
     "name": "Brute force",
     "parent": "Denial of service",
-    "probability": ""
+    "value":2.0
   },
     "leaf11": {
     "name": "System shutdown/reboot",
     "parent": "Denial of service",
-    "probability": ""
+    "value":1.5
   },
     "leaf2": {
     "name": "Tampering",
     "parent": "root",
-    "probability": "7"
+    "value":null
   },
     "leaf20": {
     "name": "Data manipulation",
     "parent": "Tampering",
-    "probability": "2.1"
+    "value":2.1
   },
     "leaf21": {
     "name": "Disk wipe",
     "parent": "Tampering",
-    "probability": "5"
+    "value":5
+  },
+    "leaf3": {
+    "name": "Elevation of privilege",
+    "parent": "root",
+    "value":null
+  },
+    "leaf31": {
+    "name": "Broken authorization",
+    "parent": "Elevation of privilege",
+    "value":3
   }
 }
