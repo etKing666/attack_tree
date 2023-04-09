@@ -1,5 +1,4 @@
 import json
-from copy import deepcopy
 from time import sleep
 from anytree import Node, RenderTree
 from anytree.exporter import DotExporter
@@ -18,7 +17,7 @@ NOTE:
 2. If you do not enter a file name and hit 'Enter', default file name (data.json) will be used.
 File name:""")
     if filename == "":
-        with open('data.json', 'r') as file:
+        with open('../data.json', 'r') as file:
             data = json.load(file)
             print("File 'data.json' is loaded to the memory.\n")
     else:
@@ -66,8 +65,7 @@ File name:""")
 def generate():
     """Generates the tree on the console."""
     if not root_node.children:  # Checks if a .json document is loaded to the memory ("Default" node with no children means no .json document)
-        print(
-            "ERROR: No .json document is loaded to the memory. Please load a .json document containing attack tree data first.\n")
+        print("ERROR: No .json document is loaded to the memory. Please load a .json document containing attack tree data first.\n")
         return
     else:
         print(RenderTree(root_node))
@@ -77,56 +75,23 @@ def generate():
 def visualise():
     """Generates a visual diagram of the tree in .png format and saves (exports) it to the working folder"""
     if not root_node.children:  # Checks if a .json document is loaded to the memory ("Default" node with no children means no .json document)
-        print(
-            "ERROR: No .json document is loaded to the memory. Please load a .json document containing attack tree data first.\n")
+        print("ERROR: No .json document is loaded to the memory. Please load a .json document containing attack tree data first.\n")
         return
-    generate()
-    select_root = input(
-        "Please refer to the attack tree above and select the leaf node which you'd like to start visualising your tree.\nYou can select the root node to visualise the whole tree or you can select a leaf node and visualise the tree partially. This may come in handy when your attack tree is too big to visualise appropriately or when you want to focus on a specific part of the tree.\nHINT: If the node is: '/Business/Threat_Category/Threat_Name' you should enter Threat_Name to select the node. You can also enter 'root' to visualise whole attack tree. Hit ENTER to exit.\nStarting leaf node:")
-    while True:
-        if select_root == "":
-            break
-        elif select_root == "root":
-            temp_tree = nodes
-            file_generate(temp_tree, root_node)
-            break
-        elif select_root not in nodes.keys():
-            print("The node couldn't be found. Please check the node name and try again.\n")
-            sleep(1)
-            break
-        else:
-            temp_tree = dict()  # Creates an empty dict for temporary tree
-            tree_root = nodes[select_root]
-            temp_tree[select_root] = nodes[select_root]
-            temp_children = nodes[select_root].descendants  # Copies a tuple of the selected leaf node's childred. Will be used for creating a dictionary of nodes iteratively.
-            for child in temp_children:
-                temp_tree[child.name] = nodes[child.name]
-            file_generate(temp_tree, tree_root)
-            break
-    return
-
-
-def file_generate(tree, selected_node):
-    """A helper function for visualise() which allows the user to create sub-trees instead of whole tree."""
-    gen_tree = deepcopy(tree)  #Copies the tree to keep temporary tree ata intact, in case user wants to make aditonal calculations/visualisations.
-    for item in gen_tree.values():
-        if item.name == selected_node.name:
-            gen_root = item
-        item.name = f"{item.name}\n{item.value}"  # So that the name is on the first line and the value is on the second.
-    if gen_root == None:
-        print("\nERROR: The leaf node couldn't be found. Please check your inout and try again.")
-        return
-    filename = input("""\nPlease enter a file name for the attack tree that will be exported as a .png file (e.g. 'attack_tree').
-    If you do not enter a file name and hit 'Enter', the file name will default to 'tree.png'.
-    File name:""")
-
+    temp_tree = nodes  # Copies the data to make some adjustments for visualization so that the original data remains intact.
+    for leaf in temp_tree.values():
+        leaf.name = f"{leaf.name}\n{leaf.value}"  # So that the name is on the first line and the value is on the second.
+        if leaf.parent is None:
+            tree_root = leaf
+    filename = input("""Please enter a file name for the attack tree that will be exported as a .png file (e.g. 'attack_tree').
+If you do not enter a file name and hit 'Enter', the file name will default to 'tree.png'.
+File name:""")
     if filename == "":
         filename = "tree.png"
     else:
         filename = filename + ".png"
-
-    DotExporter(gen_root).to_picture(f"{filename}")
+    DotExporter(tree_root).to_picture(f"{filename}")
     return
+
 
 def calculate():
     if not root_node.children:  # Checks if a .json document is loaded to the memory ("Default" node with no children means no .json document)
@@ -147,9 +112,10 @@ def calculate():
                     if num_child == 0:
                         num_child = 1  # In order escape the division by zero error for leaves with no children
                     total = 0
-                    for child in children:
-                        total += child.value
-                    node.value = total / num_child
+                    if node.value is 0.0:  # Overrides children node values if a value is provided for the parent node
+                        for child in children:
+                            total += child.value
+                        node.value = total / num_child
         req_depth -= 1
 
     print("""=================
@@ -169,40 +135,36 @@ def calculate():
         rating = "VERY LOW"
     else:
         rating = "NOT CALCULATED (INVALID VALUES). Please check the values you entered for the leaf nodes"  # In order to catch any invalid values (i.e. higher than 10)
-    print(f"\n====>The overall value is: {root_node.value} and overall threat rating is {rating}.<====\n")
-    print("HINT: If you think that the tree looks OK, you can get a .png version of it by using 'visualise' feature.\n")
+    print(f"\nThe overall value is: {root_node.value} and overall threat rating is {rating}.\n")
+    print("If you think that the tree looks OK, you can get a .png version of it by using 'visualise' feature.\n")
     return
 
-def analyse():
 
+def analyse():
     if not root_node.children:  # Checks if a .json document is loaded to the memory ("Default" node with no children means no .json document)
         print(
             "ERROR: No .json document is loaded to the memory. Please load a .json document containing attack tree data first.\n")
         return
-    print("""\nFrom this section, you can enter the probability of potential threats to take place and analyse the different scenarios and how these scenarios may impact your business. The values suggested by Microsoft vary between 0-10. Please refer to the readme file for details.
-Instructions:
-1. Only values (floating point or integer) on a scale of 0-10 are accepted.
-2. You can only enter a value to leaves, not the parent nodes.
-3. The algorithm uses a simple average and it doesn't make probabilistic (OR/AND) calculations. 
+    print("""\nFrom this section, you can enter different values to the nodes to analyse the possible impact of potential threats to the business. The values suggested by Microsoft are:
+You can also enter DREAD values. 
+Remember:
+1. You can enter a value to a parent node. In this case, the value calculated using the children nodes will be overriden.
+2. The algorithm uses a simple average. Keeping this in mind, you can enter any value (be it potential damage, cost 
+or any other value). However, it doesn't make probabilistic (OR/AND) calculations. 
 ================================
 THE CURRENT STATE OF THE TREE:
 =========================""")
     print(RenderTree(root_node))
 
     while True:
-        node_select = input("""\nPlease enter the leaf that you want to enter a value.
-HINT: If the node is: '/Business/Threat_Category/Threat_Name' you should enter Threat_Name to select the leaf.
+        node_select = input("""\nPlease enter the node/leaf that you want to enter a value.
+HINT: If the node is: '/Business/Threat_Category/Threat_Name' you should enter Threat_Name to select the node.
 Hit ENTER to exit.
-CAUTION: You can only enter a value for leaves (at the bottom of the tree), not the leaves (the higher levels).
-Enter leaf name:""")
+Enter node/leaf name:""")
         if node_select == "":
             break
         elif node_select not in nodes.keys():
-            print("ERROR: The node couldn't be found. Please check the node name and try again.\n")
-            sleep(1)
-            continue
-        elif len(nodes[node_select].children) != 0: # Checks if the user input indicates a leaf node or a leaf
-            print("ERROR: You can only enter a value for leaves (at the bottom of the tree), not the leaf nodes (the higher levels). Please check your input and try again.\n")
+            print("The node couldn't be found. Please check the node name and try again.\n")
             sleep(1)
             continue
         else:

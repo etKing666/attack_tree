@@ -2,7 +2,7 @@ import json
 from anytree import Node, RenderTree, PreOrderIter
 from anytree.exporter import DotExporter
 
-with open('data.json', 'r') as file:
+with open('../data.json', 'r') as file:
     data = json.load(file)
 
 length = len(data)
@@ -38,6 +38,7 @@ for i in range(length):
     else:
         nodes[leaf.name] = leaf
 
+print(root_node)
 print(nodes)
 print(RenderTree(root_node))
 

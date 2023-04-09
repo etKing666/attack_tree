@@ -9,5 +9,7 @@ jet = Node("Jet", parent=dan, id="node21")
 jan = Node("Jan", parent=dan, id="node22")
 joe = Node("Joe", parent=dan, id="node23")
 
+udo.name = f"{udo.name}\n{udo.id}"
+
 print(RenderTree(udo))
 DotExporter(udo).to_picture("udo.png")
