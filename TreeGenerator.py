@@ -179,7 +179,7 @@ def analyse():
         print(
             "ERROR: No .json document is loaded to the memory. Please load a .json document containing attack tree data first.\n")
         return
-    print("""\nFrom this section, you can enter the probability of potential threats to take place and analyse the different scenarios and how these scenarios may impact your business. The values suggested by Microsoft vary between 0-10. Please refer to the readme file for details.
+    print("""\nFrom this section, you can enter the probability of potential threats to take place and analyse the different scenarios and how these scenarios may impact your business. The values suggested by NIST vary between 0-10. Please refer to the readme file for details.
 Instructions:
 1. Only values (floating point or integer) on a scale of 0-10 are accepted.
 2. You can only enter a value to leaves, not the parent nodes.
