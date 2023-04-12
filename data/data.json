@@ -1,0 +1,113 @@
+{
+    "root": {
+    "name": "Acme Business",
+    "parent": "None",
+    "value":null
+  },
+    "leaf0": {
+    "name": "Spoofing",
+    "parent": "Acme Business",
+    "value":null
+  },
+    "leaf00": {
+    "name": "Steal credentials",
+    "parent": "Spoofing",
+    "value":null
+  },
+    "leaf000": {
+    "name": "Brute force (1)",
+    "parent": "Steal credentials",
+    "value":5.0
+  },
+    "leaf001": {
+    "name": "Input Capture",
+    "parent": "Steal credentials",
+    "value":4.3
+  },
+    "leaf01": {
+    "name": "Modify Authentication Process",
+    "parent": "Spoofing",
+    "value":2.4
+  },
+    "leaf1": {
+    "name": "Tampering",
+    "parent": "Acme Business",
+    "value":null
+  },
+    "leaf10": {
+    "name": "Data manipulation",
+    "parent": "Tampering",
+    "value":2.1
+  },
+    "leaf11": {
+    "name": "Disk wipe",
+    "parent": "Tampering",
+    "value":5
+  },
+    "leaf2": {
+    "name": "Repudiation",
+    "parent": "Acme Business",
+    "value":null
+  },
+    "leaf20": {
+    "name": "Hide Artefacts",
+    "parent": "Repudiation",
+    "value":2.0
+  },
+    "leaf21": {
+    "name": "Indicator Removal",
+    "parent": "Repudiation",
+    "value":1.5
+  },
+    "leaf3": {
+    "name": "Information Disclosure",
+    "parent": "Acme Business",
+    "value":null
+  },
+    "leaf31": {
+    "name": "Network Sniffing",
+    "parent": "Information Disclosure",
+    "value":2.0
+  },
+    "leaf32": {
+    "name": "Active Scanning",
+    "parent": "Information Disclosure",
+    "value":1.5
+  },
+    "leaf33": {
+    "name": "Phishing",
+    "parent": "Information Disclosure",
+    "value":5.0
+  },
+    "leaf4": {
+    "name": "Denial of service",
+    "parent": "Acme Business",
+    "value":null
+  },
+    "leaf40": {
+    "name": "Brute force (2)",
+    "parent": "Denial of service",
+    "value":4.0
+  },
+    "leaf41": {
+    "name": "System shutdown/reboot",
+    "parent": "Denial of service",
+    "value":3.5
+  },
+    "leaf5": {
+    "name": "Elevation of privilege",
+    "parent": "Acme Business",
+    "value":null
+  },
+    "leaf51": {
+    "name": "Broken authorization",
+    "parent": "Elevation of privilege",
+    "value":3.2
+  },
+
+    "leaf52": {
+    "name": "Exploitation for Credential Access",
+    "parent": "Elevation of privilege",
+    "value":2.6
+  }
+}

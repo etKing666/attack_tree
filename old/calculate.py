@@ -2,7 +2,7 @@ import json
 from anytree import Node, RenderTree, PreOrderIter
 from anytree.exporter import DotExporter
 
-with open('../data.json', 'r') as file:
+with open('../data/data.json', 'r') as file:
     data = json.load(file)
 
 length = len(data)

@@ -14,7 +14,7 @@ def generate():
     Filename:
     """)
     if filename == "":
-        with open('../data.json', 'r') as file:
+        with open('../data/data.json', 'r') as file:
             data = json.load(file)
             print("File 'data.json' is loaded to the memory.\n")
     else:

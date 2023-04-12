@@ -3,7 +3,7 @@ from anytree import Node, RenderTree
 import json
 from anytree.exporter import DotExporter
 
-with open('../data.json', 'r') as file:
+with open('../data/data.json', 'r') as file:
     data = json.load(file)
 
 

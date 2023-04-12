@@ -1,6 +1,6 @@
 {
     "root": {
-    "name": "Pampered Pets",
+    "name": "Business",
     "parent": "None",
     "value":null
   },
@@ -24,21 +24,6 @@
     "parent": "Social engineering",
     "value":7.0
   },
-    "leaf1": {
-    "name": "Denial of service",
-    "parent": "root",
-    "value":null
-  },
-    "leaf10": {
-    "name": "Brute force",
-    "parent": "Denial of service",
-    "value":2.0
-  },
-    "leaf11": {
-    "name": "System shutdown/reboot",
-    "parent": "Denial of service",
-    "value":1.5
-  },
     "leaf2": {
     "name": "Tampering",
     "parent": "root",
@@ -53,6 +38,22 @@
     "name": "Disk wipe",
     "parent": "Tampering",
     "value":5
+  },
+
+    "leaf1": {
+    "name": "Denial of service",
+    "parent": "root",
+    "value":null
+  },
+    "leaf10": {
+    "name": "Brute force",
+    "parent": "Denial of service",
+    "value":2.0
+  },
+    "leaf11": {
+    "name": "System shutdown/reboot",
+    "parent": "Denial of service",
+    "value":1.5
   },
     "leaf3": {
     "name": "Elevation of privilege",

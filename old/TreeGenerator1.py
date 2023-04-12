@@ -17,7 +17,7 @@ NOTE:
 2. If you do not enter a file name and hit 'Enter', default file name (data.json) will be used.
 File name:""")
     if filename == "":
-        with open('../data.json', 'r') as file:
+        with open('../data/data.json', 'r') as file:
             data = json.load(file)
             print("File 'data.json' is loaded to the memory.\n")
     else:

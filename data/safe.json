@@ -1,0 +1,68 @@
+{
+    "root": {
+    "name": "Open Safe",
+    "parent": "None",
+    "value":null
+  },
+    "leaf0": {
+    "name": "Pick Lock",
+    "parent": "Open Safe",
+    "value":3.0
+  },
+    "leaf1": {
+    "name": "Learn Combo",
+    "parent": "Open Safe",
+    "value":null
+  },
+    "leaf10": {
+    "name": "Find Written Combo",
+    "parent": "Learn Combo",
+    "value":5.5
+  },
+    "leaf11": {
+    "name": "Get Combo From Target",
+    "parent": "Learn Combo",
+    "value":null
+  },
+    "leaf110": {
+    "name": "Threaten",
+    "parent": "Get Combo From Target",
+    "value":1.5
+  },
+    "leaf111": {
+    "name": "Blackmail",
+    "parent": "Get Combo From Target",
+    "value":1.0
+  },
+    "leaf112": {
+    "name": "Eavesdrop",
+    "parent": "Get Combo From Target",
+    "value":null
+  },
+    "leaf1120": {
+    "name": "Listen to Conversation",
+    "parent": "Eavesdrop",
+    "value":4.2
+  },
+    "leaf1121": {
+    "name": "Get Target to State Combo",
+    "parent": "Eavesdrop",
+    "value":3.5
+  },
+    "leaf113": {
+    "name": "Bribe",
+    "parent": "Get Combo From Target",
+    "value":3.2
+  },
+    "leaf2": {
+    "name": "Cut Open Safe",
+    "parent": "Open Safe",
+    "value":2.0
+  },
+    "leaf3": {
+    "name": "Install Improperly",
+    "parent": "Open Safe",
+    "value":5.0
+  }
+}
+
