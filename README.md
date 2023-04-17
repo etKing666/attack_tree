@@ -253,12 +253,21 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OU
 ## References
 
 Anytree (N.D.) Any Python Tree Data. Available from: https://anytree.readthedocs.io/en/2.8.0/ [Accessed: 10 April 2023]
+
 Graphviz (2023) Graphviz. Available from: https://graphviz.org [Accessed 10 April 2023]
+
 Foord, M. (2023) Mock - Mocking and Testing Library. Available from: https://mock.readthedocs.io/ [Accessed 17 April 2023]
+
 National Institute of Standards and Technology (2012) *Guide for Conducting Risk Assessments.* Washington D.C.: U.S. Department of Commerce. DOI: https://doi.org/10.6028/NIST.SP.800-30r1   
+
 Python.org (2023) cmd — Support for line-oriented command interpreters. Available from: https://docs.python.org/3/library/cmd.html [Accessed 10 April 2023]
+
 Python.org (2023) copy — Shallow and deep copy operations. Available from: https://docs.python.org/3/library/copy.html [Accessed 10 April 2023]
+
 Python.org (2023) os — Miscellaneous operating system interfaces.    Available from: https://docs.python.org/3/library/os.html [Accessed 17 April 2023] 
+
 Python.org (2023) unittest — Unit testing framework. Available from: https://docs.python.org/3/library/unittest.html [Accessed 17 April 2023]
+
 Python.org (2023) json — JSON encoder and decoder. Available from: https://docs.python.org/3/library/json.html [Accessed 10 April 2023]
+
 Python.org (2023) time — Time access and conversions. Available from: https://docs.python.org/3/library/time.html [Accessed 10 April 2023]
