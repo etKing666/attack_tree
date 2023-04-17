@@ -30,7 +30,7 @@ The app provides the following features:
 
 The application relies on a number libraries and have a few dependencies to provide the intended functionalities.
 
-### External Libraries
+### External Libraries 
 
 The application uses the following external libraries:
 
