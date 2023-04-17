@@ -35,10 +35,15 @@ The application relies on a number libraries and have a few dependencies to prov
 The application uses the following external libraries:
 
 - anytree (Anytree, N.D.): Provides the basic features for attack trees such as Node class and attack tree representation.
-- cmd (Python.org, N.D.): A simple framework for command line-oriented applications.
-- json (Python.org, N.D.): A basic .json encoder and decoder for python.
-- copy (Python.org, N.D.): Provides deepcopy() function to create a new compound object by recursively cloning child objects of the original.
-- time: (Python.org, N.D.): Provides a variety of time-related functions. In the app, only sleep() function is used to the interaction more human-friendly (i.e. by pausing for certain time to allow the user to read the messages displayed).
+- cmd (Python.org, 2023a): A simple framework for command line-oriented applications.
+- json (Python.org, 2023b): A basic .json encoder and decoder for python.
+- copy (Python.org, 2023c): Provides deepcopy() function to create a new compound object by recursively cloning child objects of the original.
+- time: (Python.org, 2023d): Provides a variety of time-related functions. In the app, only sleep() function is used to the interaction more human-friendly (i.e. by pausing for certain time to allow the user to read the messages displayed).
+
+For unit testing, the following external libraries were used:
+- unittest (Python.org, 2023e): Provides the unit testing functionality.
+- mock (Michael Foord, 2023): Provides the ability to mock user input or variables for testing purposes.
+- os (Python.org, 2023f): Provides the ability to use operating system dependent functionality.
 
 Please follow the links in the references to know more about these external libraries.
 
@@ -73,6 +78,7 @@ In order to install and run the application, follow the steps blow:
    - **helpers.py**: Contains helper functions to provide required functions.
    - **README.md**: Contains information about how the features, installation and usage of the program. (This file!)
    - **tree_generator.py**: This is the main file of the project which contains CLI script. You will use this file to run the application.
+   - **unit_tests.py**: Includes a couple of unit tests crafted to verify the functionality of the application.
 
 2. Before running the application, make sure that the .json file containing your attack tree data is in the *data* folder and structured properly or that the default *data.json* file is modified to contain your attack tree data. While .json importer that anytree offers provides a different template, the application offers a customized template which is a simpler and more convenient for inexperienced users. 
    In the .json file, a leaf node looks like this:
@@ -195,6 +201,8 @@ This may come in handy when your attack tree is too big to visualise appropriate
    
    HINT: If the node is: '/Business/Threat_Category/Threat_Name' you should enter Threat_Name to select the node.
 
+   Because the tree is drawn on a grid, it is easier to follow the layout and also observe the difference between the leaf nodes of the same level.
+
    - Offers the ability to work with various .json files without having to exit the application. You can store your .json files to *data* folder and load them one by one to memory by entering the file name.
    - Calculates the values for the leaf nodes and the overall threat rating based on the user input.
 
@@ -208,7 +216,25 @@ You can contact the developer (Etkin Getir) at eg22518@essex.ac.uk for questions
 
 ## Tests
 
-Text
+Using unittest library, a total of 13 test cases were written for the application.
+   - test_no_file: Tries to load a .json file that do not exist and checks if the application returns an error.
+   - test_generate_no_file: Tries to generate an attack tree without loading a file to memory and checks if the app returns an error.
+   - test_visualise_no_file: Tries to visualise an attack tree without loading a file to memory and checks if the app returns an error.
+   - test_visualise_no_node: Tries to visualise an attack tree from a node that do not exist and checks if the app returns an error.
+   - test_generate_file: Checks if an attack tree with provided name is created.
+   - test_calculate_no_file: Tries to calculate an overall risk value without loading a file and checks if the app returns an error.
+   - test_calculate_score: Tries to calculate the overall risk score with the test data and checks if it returns the expected value.
+   - test_evaluate_very_low: Tests if the risk score (0.2) returns "VERY LOW" rating.
+   - test_evaluate_low: Tests if the risk score (2.0) returns "LOW" rating.
+   - test_evaluate_moderate: Tests if the risk score (3.7) returns "MODERATE" rating.
+   - test_evaluate_high: Tests if the risk score (8.5) returns "HIGH" rating.
+   - test_evaluate_very_high: Tests if the risk score (9.7) returns "VERY HIGH" rating.
+   - test_analyse_no_file: Tries to run analyse function without loading a file and checks if the app returns an error.
+
+Test cases can be found in the unit_tests.py file and can be run by running the following command:
+
+    python3 -m unittest -v unit_tests
+    
 
 ## License
 
@@ -227,9 +253,12 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OU
 ## References
 
 Anytree (N.D.) Any Python Tree Data. Available from: https://anytree.readthedocs.io/en/2.8.0/ [Accessed: 10 April 2023]
-Graphviz (2023). Graphviz. Available from: https://graphviz.org [Accessed: 10 April 2023]
+Graphviz (2023) Graphviz. Available from: https://graphviz.org [Accessed 10 April 2023]
+Foord, M. (2023) Mock - Mocking and Testing Library. Available from: https://mock.readthedocs.io/ [Accessed 17 April 2023]
 National Institute of Standards and Technology (2012) *Guide for Conducting Risk Assessments.* Washington D.C.: U.S. Department of Commerce. DOI: https://doi.org/10.6028/NIST.SP.800-30r1   
-Python.org (N.D.) cmd — Support for line-oriented command interpreters. Available from: https://docs.python.org/3/library/cmd.html [Accessed: 10 April 2023]
-Python.org (N.D.) copy — Shallow and deep copy operations. Available from: https://docs.python.org/3/library/copy.html [Accessed: 10 April 2023]
-Python.org (N.D.) json — JSON encoder and decoder. Available from: https://docs.python.org/3/library/json.html [Accessed: 10 April 2023]
-Python.org (N.D.) time — Time access and conversions. Available from: https://docs.python.org/3/library/time.html [Accessed: 10 April 2023]
+Python.org (2023) cmd — Support for line-oriented command interpreters. Available from: https://docs.python.org/3/library/cmd.html [Accessed 10 April 2023]
+Python.org (2023) copy — Shallow and deep copy operations. Available from: https://docs.python.org/3/library/copy.html [Accessed 10 April 2023]
+Python.org (2023) os — Miscellaneous operating system interfaces.    Available from: https://docs.python.org/3/library/os.html [Accessed 17 April 2023] 
+Python.org (2023) unittest — Unit testing framework. Available from: https://docs.python.org/3/library/unittest.html [Accessed 17 April 2023]
+Python.org (2023) json — JSON encoder and decoder. Available from: https://docs.python.org/3/library/json.html [Accessed 10 April 2023]
+Python.org (2023) time — Time access and conversions. Available from: https://docs.python.org/3/library/time.html [Accessed 10 April 2023]

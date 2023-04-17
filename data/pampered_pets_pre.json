@@ -1,0 +1,223 @@
+{
+    "root": {
+    "name": "Pampered Pets",
+    "parent": "None",
+    "value":null
+  },
+    "leaf0": {
+    "name": "Spoofing",
+    "parent": "Pampered Pets",
+    "value":null
+  },
+    "leaf00": {
+    "name": "Adversary-in-the-Middle",
+    "parent": "Spoofing",
+    "value":3.0
+  },
+    "leaf01": {
+    "name": "Brute force(1)",
+    "parent": "Spoofing",
+    "value":4.67
+  },
+    "leaf02": {
+    "name": "OS Credential Dumping",
+    "parent": "Spoofing",
+    "value":0.67
+  },
+    "leaf03": {
+    "name": "Input Capture",
+    "parent": "Spoofing",
+    "value":4.0
+  },
+    "leaf04": {
+    "name": "Modify Authentication Process",
+    "parent": "Spoofing",
+    "value":3.33
+  },
+    "leaf1": {
+    "name": "Tampering",
+    "parent": "Pampered Pets",
+    "value":null
+  },
+    "leaf10": {
+    "name": "Data manipulation",
+    "parent": "Tampering",
+    "value":5.67
+  },
+    "leaf11": {
+    "name": "Defacement",
+    "parent": "Tampering",
+    "value":2.33
+  },
+    "leaf12": {
+    "name": "Disk Wipe",
+    "parent": "Tampering",
+    "value":2.33
+  },
+    "leaf2": {
+    "name": "Repudiation",
+    "parent": "Pampered Pets",
+    "value":null
+  },
+    "leaf20": {
+    "name": "Masquerading ",
+    "parent": "Repudiation",
+    "value":0.67
+  },
+    "leaf21": {
+    "name": "Hide Artefacts",
+    "parent": "Repudiation",
+    "value":0.67
+  },
+    "leaf22": {
+    "name": "Indicator Removal",
+    "parent": "Repudiation",
+    "value":0.67
+  },
+    "leaf3": {
+    "name": "Information Disclosure",
+    "parent": "Pampered Pets",
+    "value":null
+  },
+    "leaf30": {
+    "name": "Network Sniffing",
+    "parent": "Information Disclosure",
+    "value":6.67
+  },
+    "leaf31": {
+    "name": "Active Scanning",
+    "parent": "Information Disclosure",
+    "value":5.00
+  },
+    "leaf32": {
+    "name": "Account Discovery",
+    "parent": "Information Disclosure",
+    "value":3.33
+  },
+    "leaf33": {
+    "name": "File and Directory Discovery",
+    "parent": "Information Disclosure",
+    "value":1.33
+  },
+    "leaf34": {
+    "name": "Group Policy Discovery",
+    "parent": "Information Disclosure",
+    "value":0
+  },
+    "leaf35": {
+    "name": "Network Service Discovery",
+    "parent": "Information Disclosure",
+    "value":3.0
+  },
+    "leaf36": {
+    "name": "Password Policy Discovery",
+    "parent": "Information Disclosure",
+    "value":2.67
+  },
+    "leaf37": {
+    "name": "System Information Discovery",
+    "parent": "Information Disclosure",
+    "value":2.33
+  },
+    "leaf38": {
+    "name": "System Network Configuration Discovery",
+    "parent": "Information Disclosure",
+    "value":0.67
+  },
+    "leaf39": {
+    "name": "Software Discovery",
+    "parent": "Information Disclosure",
+    "value":0
+  },
+    "leaf3a": {
+    "name": "System Owner/User Discovery",
+    "parent": "Information Disclosure",
+    "value":2.0
+  },
+    "leaf3b": {
+    "name": "Email Collection",
+    "parent": "Information Disclosure",
+    "value":7.0
+  },
+    "leaf3c": {
+    "name": "Automated Exfiltration",
+    "parent": "Information Disclosure",
+    "value":0.0
+  },
+    "leaf3d": {
+    "name": "Gather Victim Identity Information",
+    "parent": "Information Disclosure",
+    "value":6.67
+  },
+    "leaf3e": {
+    "name": "Gather Victim Network Information",
+    "parent": "Information Disclosure",
+    "value":8.67
+  },
+    "leaf3f": {
+    "name": "Gather Victim Organisation Information",
+    "parent": "Information Disclosure",
+    "value":7.67
+  },
+    "leaf3g": {
+    "name": "Phishing",
+    "parent": "Information Disclosure",
+    "value":8.33
+  },
+    "leaf3h": {
+    "name": "Phishing for Information",
+    "parent": "Information Disclosure",
+    "value":7.0
+  },
+    "leaf4": {
+    "name": "Denial of service",
+    "parent": "Pampered Pets",
+    "value":null
+  },
+    "leaf40": {
+    "name": "Resource Hijacking",
+    "parent": "Denial of service",
+    "value":0.67
+  },
+    "leaf41": {
+    "name": "Brute force(2)",
+    "parent": "Denial of service",
+    "value":4.0
+  },
+    "leaf42": {
+    "name": "System shutdown/reboot",
+    "parent": "Denial of service",
+    "value":1.67
+  },
+    "leaf5": {
+    "name": "Elevation of privilege",
+    "parent": "Pampered Pets",
+    "value":null
+  },
+    "leaf50": {
+    "name": "Abuse Elevation Control Mechanism",
+    "parent": "Elevation of privilege",
+    "value":0.67
+  },
+    "leaf51": {
+    "name": "Boot or Logon Initialization Scripts",
+    "parent": "Elevation of privilege",
+    "value":0.67
+  },
+
+    "leaf52": {
+    "name": "Scheduled Task/Job",
+    "parent": "Elevation of privilege",
+    "value":0
+  },
+    "leaf53": {
+    "name": "Boot or Logon Autostart Execution",
+    "parent": "Elevation of privilege",
+    "value":0
+  },
+    "leaf54": {
+    "name": "Exploitation for Credential Access",
+    "parent": "Elevation of privilege",
+    "value":3.2
+  }
+}

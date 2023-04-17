@@ -1,0 +1,18 @@
+************* Module helpers
+helpers.py:38:4: W0603: Using the global statement (global-statement)
+helpers.py:75:12: C0206: Consider iterating with .items() (consider-using-dict-items)
+helpers.py:75:23: C0201: Consider iterating the dictionary directly instead of calling .keys() (consider-iterating-dictionary)
+helpers.py:36:0: R0912: Too many branches (14/12) (too-many-branches)
+helpers.py:140:30: C0201: Consider iterating the dictionary directly instead of calling .keys() (consider-iterating-dictionary)
+helpers.py:283:30: C0201: Consider iterating the dictionary directly instead of calling .keys() (consider-iterating-dictionary)
+helpers.py:287:8: R1724: Unnecessary "else" after "continue", remove the "else" and de-indent the code inside it (no-else-continue)
+helpers.py:301:20: R1723: Unnecessary "elif" after "break", remove the leading "el" from "elif" (no-else-break)
+helpers.py:251:0: R0912: Too many branches (14/12) (too-many-branches)
+
+------------------------------------------------------------------
+Your code has been rated at 8.79/10 (previous run: 8.79/10, +0.00)
+
+COMMENTS BY THE DEVELOPER
+-------------------------
+Majority of the errors reported by Pylint (incl. convention errors and warnings) were fixed. 
+The remaining ones above are due to design decision.

@@ -1,0 +1,15 @@
+************* Module tree_generator
+tree_generator.py:37:21: W0613: Unused argument 'inp' (unused-argument)
+tree_generator.py:42:26: W0613: Unused argument 'inp' (unused-argument)
+tree_generator.py:47:27: W0613: Unused argument 'inp' (unused-argument)
+tree_generator.py:52:27: W0613: Unused argument 'inp' (unused-argument)
+tree_generator.py:57:25: W0613: Unused argument 'inp' (unused-argument)
+tree_generator.py:63:22: W0613: Unused argument 'inp' (unused-argument)
+
+------------------------------------------------------------------
+Your code has been rated at 7.69/10 (previous run: 7.69/10, +0.00)
+
+COMMENTS BY THE DEVELOPER
+-------------------------
+Even though it is not used explicity, Cmd class requires inp argument, otherwise it
+returns an error.

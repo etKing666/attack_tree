@@ -1,0 +1,98 @@
+python3 -m unittest -v unit_tests
+
+test_analyse_no_file (unit_tests.test_analyse)
+Tries to run analyse() function without loading a file ... ERROR: No .json document is loaded to the memory. Please load a .json document containing attack tree data first.
+
+ok
+
+test_calculate_no_file (unit_tests.test_calculate)
+Tries to calculate an overall risk value without loading a file ... ERROR: No .json document is loaded to the memory.Please load a .json document containing attack tree data first.
+
+ok
+
+test_calculate_score (unit_tests.test_calculate)
+Tries to calculate the overall risk score with the test data and checks ...
+====================================================================================================
+                                  THE TREE WITH CALCULATED VALUES:
+====================================================================================================
+Node('/A', value=3.08)
+├── Node('/A/A1', value=3.0)
+├── Node('/A/A2', value=4.25)
+│   ├── Node('/A/A2/A21', value=5.5)
+│   └── Node('/A/A2/A22', value=3.0)
+└── Node('/A/A3', value=2.0)
+
+====>The overall value is: 3.08 and overall threat rating is MODERATE.<====
+
+HINT: If you think that the tree looks OK, you can get a .png version of it by using 'visualise' feature.
+
+ok
+
+test_evaluate_high (unit_tests.test_evaluate)
+Should return "HIGH" ...
+====>The overall value is: 8.5 and overall threat rating is HIGH.<====
+
+ok
+
+test_evaluate_low (unit_tests.test_evaluate)
+Should return "LOW" ...
+====>The overall value is: 2.0 and overall threat rating is LOW.<====
+
+ok
+
+test_evaluate_moderate (unit_tests.test_evaluate)
+Should return "MODERATE" ...
+====>The overall value is: 3.7 and overall threat rating is MODERATE.<====
+
+ok
+
+test_evaluate_very_high (unit_tests.test_evaluate)
+Should return "VERY HIGH" ...
+====>The overall value is: 9.7 and overall threat rating is VERY HIGH.<====
+
+ok
+
+test_evaluate_very_low (unit_tests.test_evaluate)
+Should return "VERY LOW" ...
+====>The overall value is: 0.2 and overall threat rating is VERY LOW.<====
+
+ok
+
+test_generate_file (unit_tests.test_file_generate)
+Checks if an attack tree with provided name is created. ... The tree image has been exported to the /trees folder.
+
+ok
+
+test_generate_no_file (unit_tests.test_generate)
+Tries to generate an attack tree with the default node and checks ... ERROR: No .json document is loaded to the memory. Please load a .json document containing attack tree data first.
+
+ok
+
+test_no_file (unit_tests.test_load_file)
+Tries to load "foobarbaz123.json" and checks if the application returns an error. ... File couldn't be loaded. Please check the file name & extension and try again.
+ok
+
+test_visualise_no_file (unit_tests.test_visualise)
+Tries to visualise an attack tree with the default node and checks ... ERROR: No .json document is loaded to the memory. Please load a .json document containing attack tree data first.
+
+ok
+
+test_visualise_no_node (unit_tests.test_visualise)
+Tries to visualise an attack tree from a node that do not exist ...
+====================================================================================================
+                                          THE ATTACK TREE
+====================================================================================================
+Node('/A', value=3.08)
+├── Node('/A/A1', value=3.0)
+├── Node('/A/A2', value=4.25)
+│   ├── Node('/A/A2/A21', value=5.5)
+│   └── Node('/A/A2/A22', value=3.0)
+└── Node('/A/A3', value=2.0)
+The node couldn't be found. Please check the node name and try again.
+
+ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 12.362s
+
+OK

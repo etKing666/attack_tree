@@ -1,0 +1,332 @@
+{
+    "root": {
+    "name": "Pampered Pets",
+    "parent": "None",
+    "value":null
+  },
+    "leaf0": {
+    "name": "Spoofing",
+    "parent": "Pampered Pets",
+    "value":null
+  },
+    "leaf00": {
+    "name": "Adversary-in-the-Middle",
+    "parent": "Spoofing",
+    "value":5.0
+  },
+    "leaf01": {
+    "name": "Brute Force(1)",
+    "parent": "Spoofing",
+    "value":7.0
+  },
+    "leaf02": {
+    "name": "OS Credential Dumping",
+    "parent": "Spoofing",
+    "value":2.33
+  },
+    "leaf03": {
+    "name": "Input Capture",
+    "parent": "Spoofing",
+    "value":5.0
+  },
+    "leaf04": {
+    "name": "Modify Authentication Process",
+    "parent": "Spoofing",
+    "value":3.0
+  },
+    "leaf05": {
+    "name": "Exploit Public-Facing Application",
+    "parent": "Spoofing",
+    "value":0.67
+  },
+    "leaf06": {
+    "name": "Forge Web Credentials",
+    "parent": "Spoofing",
+    "value":5.0
+  },
+    "leaf07": {
+    "name": "Steal Web Session Cookie",
+    "parent": "Spoofing",
+    "value":1.33
+  },
+    "leaf08": {
+    "name": "Compromise Accounts",
+    "parent": "Spoofing",
+    "value":4.0
+  },
+    "leaf1": {
+    "name": "Tampering",
+    "parent": "Pampered Pets",
+    "value":null
+  },
+    "leaf10": {
+    "name": "Data Manipulation",
+    "parent": "Tampering",
+    "value":6.67
+  },
+    "leaf11": {
+    "name": "Defacemenet",
+    "parent": "Tampering",
+    "value":1.67
+  },
+    "leaf12": {
+    "name": "Account Manipulation",
+    "parent": "Tampering",
+    "value":5.67
+  },
+    "leaf13": {
+    "name": "Modify Cloud Compute Infrastructure",
+    "parent": "Tampering",
+    "value":3.33
+  },
+    "leaf14": {
+    "name": "Disk Wipe",
+    "parent": "Tampering",
+    "value":4.0
+  },
+    "leaf2": {
+    "name": "Repudiation",
+    "parent": "Pampered Pets",
+    "value":null
+  },
+    "leaf20": {
+    "name": "Masquerading",
+    "parent": "Repudiation",
+    "value":1.33
+  },
+    "leaf21": {
+    "name": "Hide Artifacts",
+    "parent": "Repudiation",
+    "value":0.67
+  },
+    "leaf22": {
+    "name": "Indicator Removal",
+    "parent": "Repudiation",
+    "value":2.33
+  },
+    "leaf3": {
+    "name": "Information Disclosure",
+    "parent": "Pampered Pets",
+    "value":null
+  },
+    "leaf30": {
+    "name": "Network Sniffing",
+    "parent": "Information Disclosure",
+    "value":8.67
+  },
+    "leaf31": {
+    "name": "Active Scanning",
+    "parent": "Information Disclosure",
+    "value":9.33
+  },
+    "leaf32": {
+    "name": "Account Discovery",
+    "parent": "Information Disclosure",
+    "value":7.0
+  },
+    "leaf33": {
+    "name": "File and Directory Discovery",
+    "parent": "Information Disclosure",
+    "value":3.0
+  },
+    "leaf34": {
+    "name": "Group Policy Discovery",
+    "parent": "Information Disclosure",
+    "value":4.0
+  },
+    "leaf35": {
+    "name": "Network Service Discovery",
+    "parent": "Information Disclosure",
+    "value":5.0
+  },
+    "leaf36": {
+    "name": "Password Policy Discovery",
+    "parent": "Information Disclosure",
+    "value":8.67
+  },
+    "leaf37": {
+    "name": "System Information Discovery",
+    "parent": "Information Disclosure",
+    "value":8.0
+  },
+    "leaf38": {
+    "name": "System Network Configuration Discovery",
+    "parent": "Information Disclosure",
+    "value":7.0
+  },
+    "leaf39": {
+    "name": "Software Discovery",
+    "parent": "Information Disclosure",
+    "value":3.0
+  },
+    "leaf3a": {
+    "name": "System Owner/User Discovery",
+    "parent": "Information Disclosure",
+    "value":5.0
+  },
+    "leaf3b": {
+    "name": "Cloud Infrastructure Discovery",
+    "parent": "Information Disclosure",
+    "value":6.0
+  },
+    "leaf3c": {
+    "name": "Cloud Service Dashboard",
+    "parent": "Information Disclosure",
+    "value":9.33
+  },
+    "leaf3d": {
+    "name": "Cloud Service Discovery",
+    "parent": "Information Disclosure",
+    "value":6.0
+  },
+    "leaf3e": {
+    "name": "Cloud Storage Object Discovery",
+    "parent": "Information Disclosure",
+    "value":8.67
+  },
+    "leaf3f": {
+    "name": "Credentials from Password Stores",
+    "parent": "Information Disclosure",
+    "value":5.33
+  },
+    "leaf3g": {
+    "name": "Unsecured Credentials",
+    "parent": "Information Disclosure",
+    "value":10.0
+  },
+    "leaf3h": {
+    "name": "Email Collection",
+    "parent": "Information Disclosure",
+    "value":8.0
+  },
+    "leaf3i": {
+    "name": "Automatred Exfiltration",
+    "parent": "Information Disclosure",
+    "value":2.33
+  },
+    "leaf3j": {
+    "name": "Gather Victim Identity Information",
+    "parent": "Information Disclosure",
+    "value":7.67
+  },
+    "leaf3k": {
+    "name": "Gather Victim Network Information",
+    "parent": "Information Disclosure",
+    "value":7.67
+  },
+    "leaf3l": {
+    "name": "Gather Victim Organisation Information",
+    "parent": "Information Disclosure",
+    "value":5.0
+  },
+    "leaf3m": {
+    "name": "Search Open Technical Databases",
+    "parent": "Information Disclosure",
+    "value":4.0
+  },
+    "leaf3n": {
+    "name": "Search Open Websites/Domains",
+    "parent": "Information Disclosure",
+    "value":5.0
+  },
+    "leaf3o": {
+    "name": "Search Closed Sources",
+    "parent": "Information Disclosure",
+    "value":2.0
+  },
+    "leaf3p": {
+    "name": "Search Victim-Owned Websites",
+    "parent": "Information Disclosure",
+    "value":4.0
+  },
+    "leaf3r": {
+    "name": "Transfer Data to Cloud Account",
+    "parent": "Information Disclosure",
+    "value":3.33
+  },
+    "leaf3s": {
+    "name": "Phishing",
+    "parent": "Information Disclosure",
+    "value":10.0
+  },
+    "leaf3t": {
+    "name": "Phishing for Information",
+    "parent": "Information Disclosure",
+    "value":10.0
+  },
+    "leaf4": {
+    "name": "Denial of service",
+    "parent": "Pampered Pets",
+    "value":null
+  },
+    "leaf40": {
+    "name": "Resource Hijacking",
+    "parent": "Denial of service",
+    "value":0.67
+  },
+    "leaf41": {
+    "name": "Unused/Unsupported Cloud Regions",
+    "parent": "Denial of service",
+    "value":0
+  },
+    "leaf42": {
+    "name": "Network Denial of Service",
+    "parent": "Denial of service",
+    "value":8.67
+  },
+    "leaf43": {
+    "name": "Endpoint Denial of Service",
+    "parent": "Denial of service",
+    "value":6.67
+  },
+    "leaf44": {
+    "name": "Brute Force(2)",
+    "parent": "Denial of service",
+    "value":7.0
+  },
+    "leaf45": {
+    "name": "System Shutdown/Reboot",
+    "parent": "Denial of service",
+    "value":2.33
+  },
+    "leaf5": {
+    "name": "Elevation of privilege",
+    "parent": "Pampered Pets",
+    "value":null
+  },
+    "leaf50": {
+    "name": "Abuse Elevation Control Mechanism",
+    "parent": "Elevation of privilege",
+    "value":0.67
+  },
+    "leaf51": {
+    "name": "Boot or Logon Initialization Scripts",
+    "parent": "Elevation of privilege",
+    "value":0.67
+  },
+    "leaf52": {
+    "name": "Scheduled Task/Job",
+    "parent": "Elevation of privilege",
+    "value":0.67
+  },
+    "leaf53": {
+    "name": "Boot or Logon Autostart Execution",
+    "parent": "Elevation of privilege",
+    "value":0.67
+  },
+    "leaf55": {
+    "name": "Valid Accounts",
+    "parent": "Elevation of privilege",
+    "value":7.67
+  },
+    "leaf56": {
+    "name": "Create Account",
+    "parent": "Elevation of privilege",
+    "value":7.0
+  },
+    "leaf54": {
+    "name": "Exploitation for Credential Access",
+    "parent": "Elevation of privilege",
+    "value":4.0
+  }
+}
