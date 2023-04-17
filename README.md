@@ -42,7 +42,7 @@ The application uses the following external libraries:
 
 For unit testing, the following external libraries were used:
 - unittest (Python.org, 2023e): Provides the unit testing functionality.
-- mock (Michael Foord, 2023): Provides the ability to mock user input or variables for testing purposes.
+- mock (Foord, 2023): Provides the ability to mock user input or variables for testing purposes.
 - os (Python.org, 2023f): Provides the ability to use operating system dependent functionality.
 
 Please follow the links in the references to know more about these external libraries.
@@ -231,7 +231,7 @@ Using unittest library, a total of 13 test cases were written for the applicatio
    - test_evaluate_very_high: Tests if the risk score (9.7) returns "VERY HIGH" rating.
    - test_analyse_no_file: Tries to run analyse function without loading a file and checks if the app returns an error.
 
-Test cases can be found in the unit_tests.py file and can be run by running the following command:
+Test cases can be found in the unit_tests.py file and can be run by running the following command (verbose mode):
 
     python3 -m unittest -v unit_tests
     
